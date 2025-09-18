@@ -1,6 +1,7 @@
-langgraph
-langchain
-python-dotenv
-langchain-google-genai
-flask
-flask-cors
+langgraph==0.2.45
+langchain==0.3.7
+python-dotenv==1.0.1
+langchain-google-genai==2.0.6
+flask==3.0.3
+flask-cors==4.0.0
+pydantic==2.9.2

@@ -2,13 +2,29 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 from EssayRating import workflow
 import traceback
+import os
 
 app = Flask(__name__)
 CORS(app)
 
+@app.route('/', methods=['GET'])
+def home():
+    return jsonify({
+        'message': 'UPSC Essay Rating API',
+        'status': 'running',
+        'endpoints': {
+            'evaluate': '/evaluate (POST)',
+            'health': '/health (GET)'
+        }
+    })
+
 @app.route('/evaluate', methods=['POST'])
 def evaluate_essay():
     try:
+        # Check if Google API key is available
+        if not os.getenv('GOOGLE_API_KEY'):
+            return jsonify({'error': 'Google API key not configured'}), 500
+            
         data = request.get_json()
         
         if not data or 'essay' not in data:
