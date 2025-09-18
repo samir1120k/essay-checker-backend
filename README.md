@@ -1,8 +1,9 @@
 # UPSC Essay Rating API
+## How rating system work usign Langgraph
 
 A Flask-based API for evaluating essays using Google's Gemini AI model. This API provides comprehensive feedback on language quality, analysis depth, and clarity of thought.
 
-## Features
+<img width="591" height="333" alt="Image" src="https://github.com/user-attachments/assets/d943a1c6-ab6d-4e3e-a961-0784dcbbc073" />
 
 - **Language Quality Evaluation**: Assesses grammar, vocabulary, and writing style
 - **Analysis Depth Evaluation**: Evaluates the depth and quality of analysis
